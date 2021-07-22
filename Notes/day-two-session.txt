@@ -1,0 +1,23 @@
+
+The Angular Test Bed (ATB):
+
+	- A higher level Angular Only Testing Framework.
+	- This allows us to easily test behavious that depends on the Angular Framework.
+	
+Fixtures and DI:
+
+	Onces the Angular Test Bed is setup, 
+	we can use it to instantiate components and resolve depdencies
+	
+- A fixture is a wrapper for a component and its template.
+- We create an instance of a component fixture through the TestBed.
+- This injects the Dependency i.e. AuthService into the component constructor.
+- We can find the actual component from the componentInstance on the fixture.
+- We can get resolve depdencies using TestBed injector by using the get function
+
+Angular Test Bed needs to be used:
+
+	- It allows to easily test change detection algorithm.
+	- It allows to test Angular DI framework.
+	- It allows to test using the NgMOdule configuration we use in our application.
+	- It allows us to test user interation vi clicks and input fields.

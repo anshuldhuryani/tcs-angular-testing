@@ -1,0 +1,167 @@
+
+Angular Unit Testing (Day-One):
+
+Angular unit testing – end to end using Jasmine and karma
+Isolated Unit Tests
+Shallow Integration Tests
+Debugging Techniques with Angular and Karma
+Using TestBed
+Testing Rendered HTML
+More Complex Shallow Integration Tests
+Mocking an Injected Service
+Mocking Child Components
+Dealing with Lists of Elements
+Deep Integration Tests
+Basic Async Testing
+Creating a Deep Integration Test
+Finding Elements by Directive
+Integration Testing of Services
+Implementing a Test with Mocked HTTP
+
+------------------------------------------------------
+
+1. Windows/Mac/Linux
+
+2. Software Requirements:
+
+-- To check if node is installed or not:	
+
+	node --version
+
+-- To check if npm is installed or not:
+	
+	npm --version
+	
+-- To check if Visual Studio Code is installed or not:
+	
+	code -- version
+	
+-- To check if angular CLI is installed or not:
+
+	ng --version
+	
+---------------------------------------------------
+
+Steps to generate angular CLI project:
+
+	ng new angular-unit-testing
+	cd angular-unit-testing
+	ng serve -o
+	
+	Error: Cannot find module '@angular-devkit
+	
+	npm install --only=dev
+	ng serve -o
+	
+---------------------------------------------------
+	
+There are three tests that we can perform at client-side framework:
+
+1. Unit Tests
+2. Integration Tets
+3. e2e Tests
+
+Unit Tests: Jasmine and Karma
+
+Jasmine: Unit Testing Framework
+Karma: Test Runner to run unit tests
+
+Jasmine:
+
+	- A JavaScript Testing Framework
+	- Supports development practice i.e. BDD (Behavioural Driven Development)
+	
+--------------------------------------------------
+
+	npm run test	
+	ng test
+	
+--------------------------------------------------
+
+	it(): Declaration of particular unit test case.
+	
+	describe(): It's a suite of test. (test-group)
+	
+	expect(): Expect some value in true form.
+	
+---------------------------------------------------
+
+	addition(num1, num2) {
+		return num1 + num2
+	}
+	
+
+There are 4 Test Cases in 1 Test Group:
+	
+	Testing Addition Method: 
+		1. Adding two positive numbers: 100, 200 = 300
+		2. Adding two negative numbers: -100, -200 = -300
+		3. Adding first positive and second negative number: 100, -200 = -100
+		4. Adding first negative and second positive number: -100, 200 = 100
+
+-----------------------------------------------------	
+
+expect(array).toContain(member);
+expect(fn).toThrow(string);
+expect(fn).toThrowError(string);
+expect(instance).toBe(instance);
+expect(mixed).toBeDefined();
+expect(mixed).toBeFalsy();
+expect(mixed).toBeNull();
+expect(mixed).toBeTruthy();
+expect(mixed).toBeUndefined();
+expect(mixed).toEqual(mixed);
+expect(mixed).toMatch(pattern);
+expect(number).toBeCloseTo(number, decimalPlaces);
+expect(number).toBeGreaterThan(number);
+expect(number).toBeLessThan(number);
+expect(number).toBeNaN();
+expect(spy).toHaveBeenCalled();
+expect(spy).toHaveBeenCalledTimes(number);
+expect(spy).toHaveBeenCalledWith(...arguments);
+
+------------------------------------------------------
+
+Setup and Teardown:
+
+Setup: to make initial process ready such as creating object, ref variables etc.
+
+Teardown: to perform cleanup activities after we have finished testing such as need to delete some files from drive, disponse the objects manually, closing connections, unsubscribe obervables, cancel promises and so on.
+
+Jamine has few functions for Setup and Teardown:
+
+1. beforeAll
+2. afterAll
+3. beforeEach: This function is called beforeEach test specifiction/case. (it)
+4. afterEach: This function is called afterEach test specifiction/case. (it)
+
+describe('', () => {
+	beforeAll(() => { })
+	beforeEach(() => { })
+	it('', () => { }) or describe('', () => { })
+	it('', () => { }) or describe('', () => { })
+	beforeEach(() => { })
+	afterAll(() => { })
+})
+
+----------------------------------------------------
+
+1. Jasmin & Karma
+2. Testing Service Classes
+3. Mocks and spies
+
+Spy: a feature of Jasmine which lets you take an existing class, function and mock it such a way that you can control what gets returned from function calls.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
